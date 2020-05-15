@@ -1,0 +1,94 @@
+.current {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0 2rem 3rem 2rem;
+    @media screen and (max-width: 480px) {
+        flex-flow: column;
+    }
+}
+
+.current-left {
+    font-family: $font-main;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+}
+
+.current__icon {
+    padding: 0;
+    @media screen and (max-width: 480px) {
+        padding: 0 0 2rem 0;
+    }
+}
+
+.current__summary {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    line-height: 2.6rem;
+}
+
+.current-right {
+    font-family: $font-secondary;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.current__temp {
+    display: flex;
+    line-height: 0;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.current__temp-num {
+    font-size: 6rem;
+    text-align: center;
+    @media screen and (max-width: 480px) {
+        padding: 3rem 0 0 0;
+    }
+}
+
+.current__other {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 2rem 0 0 0;
+}
+
+.current__other img {
+    width: 40px;
+    height: 40px;
+    padding-bottom: 0.5rem;
+    @media screen and (max-width: 480px) {
+        padding-bottom: 0.65rem;
+    }
+}
+
+.current__other p {
+    font-size: 1.2rem;
+}
+
+.current__other span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    @media screen and (max-width: 480px) {
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 0.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .current__wind,
+    .current__humidity,
+    .current__precipitation {
+        padding: 0 2rem;
+    }
+}

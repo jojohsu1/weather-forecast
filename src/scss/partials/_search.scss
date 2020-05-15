@@ -1,0 +1,63 @@
+    .search {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        margin-top: 2rem;
+        font-family: $font-secondary;
+        @media screen and (max-width: 480px) {
+            margin-top: 0.8rem;
+            flex-flow: column;
+        }
+    }
+    
+    .search__city {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        @media screen and (max-width: 480px) {
+            text-align: center;
+            margin-top: 8rem;
+        }
+    }
+    
+    .search__form {
+        display: block;
+        margin: auto 0;
+        position: relative;
+    }
+    
+    .search__input {
+        font-size: 1.8rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 3rem;
+        outline: 0;
+        border: 0;
+        padding: 3rem;
+        border-radius: 6px;
+        width: 0;
+        opacity: 0;
+        transition: 0.3s all ease;
+    }
+    
+    .search__input--open {
+        width: 15rem;
+        opacity: 1;
+    }
+    
+    .search__trigger {
+        width: 3.3rem;
+        height: 3.3rem;
+        border-radius: 6px;
+        background: $white;
+        border-width: 0;
+        font-size: 1.2rem;
+        position: relative;
+        color: $main-pink;
+    }
+    
+    .search__trigger:hover {
+        cursor: pointer;
+    }

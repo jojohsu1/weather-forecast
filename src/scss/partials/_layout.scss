@@ -1,0 +1,33 @@
+html {
+    font-size: 12px;
+}
+
+body {
+    color: $white;
+    background: $bgcolor;
+    height: 100vh;
+    @media screen and(max-width: 480px) {
+        background: $bgpink;
+    }
+}
+
+.container {
+    max-width: 768px;
+    margin: 0 auto;
+    border-radius: 6px;
+    background-color: $small-bgcolor;
+    position: relative;
+    @media screen and(max-width: 480px) {
+        background-color: transparent;
+        overflow: hidden;
+    }
+}
+
+.weather {
+    margin: 4rem 2rem;
+    padding: 1rem 1.8rem;
+    height: auto;
+    @media screen and (max-width: 480px) {
+        margin: 0;
+    }
+}

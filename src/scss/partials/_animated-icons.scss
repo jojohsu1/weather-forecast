@@ -1,0 +1,300 @@
+    .icon {
+        position: relative;
+        display: inline-block;
+        width: 12em;
+        height: 10em;
+        font-size: 1em;
+        color: $bgpink;
+    }
+    
+    .cloud {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        width: 3.6875em;
+        height: 3.6875em;
+        margin: -1.84375em;
+        background: $bgpink;
+        border-radius: 50%;
+        box-shadow: -2.1875em 0.6875em 0 -0.6875em, 2.0625em 0.9375em 0 -0.9375em, 0 0 0 0.375em $white, -2.1875em 0.6875em 0 -0.3125em $white, 2.0625em 0.9375em 0 -0.5625em $white;
+    }
+    
+    .cloud:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 4.5625em;
+        height: 1em;
+        left: -0.5em;
+        background: $bgpink;
+        box-shadow: 0 0.4375em 0 -0.0625em $white;
+    }
+    
+    .cloud:nth-child(2) {
+        z-index: 0;
+        background: $white;
+        box-shadow: -2.1875em 0.6875em 0 -0.6875em $white, 2.0625em 0.9375em 0 -0.9375em $white, 0 0 0 0.375em $white, -2.1875em 0.6875em 0 -0.3125em $white, 2.0625em 0.9375em 0 -0.5625em $white;
+        opacity: 0.1;
+        transform: scale(0.5) translate(6em, -3em);
+        animation: cloud 4s infinite linear;
+    }
+    
+    .cloud:nth-child(2):after {
+        background: $white;
+    }
+    
+    .sun {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -1.25em;
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 50%;
+        background-color: $bgpink;
+        box-shadow: 0 0 0 0.375em $white;
+        animation: spin 12s infinite linear;
+    }
+    
+    .rays {
+        position: absolute;
+        top: -2em;
+        left: 50%;
+        display: block;
+        width: 0.375em;
+        height: 1.125em;
+        border-radius: 0.25em;
+        margin-left: -0.1875em;
+        background: $white;
+        box-shadow: 0 5.375em $white;
+    }
+    
+    .rays:before,
+    .rays:after {
+        content: '';
+        position: absolute;
+        top: 0em;
+        left: 0em;
+        display: block;
+        width: 0.375em;
+        height: 1.125em;
+        border-radius: 0.25em;
+        transform: rotate(60deg);
+        transform-origin: 50% 3.25em;
+        background: $white;
+        box-shadow: 0 5.375em $white;
+    }
+    
+    .rays:before {
+        transform: rotate(120deg);
+    }
+    
+    .cloud+.sun {
+        margin: -2em 1em;
+    }
+    
+    .rain,
+    .snow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 3.75em;
+        height: 3.75em;
+        background: $bgpink;
+        margin: 0.375em 0 0 -2em;
+    }
+    
+    .rain:after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        width: 0.3em;
+        height: 1.5em;
+        border-radius: 0.25em;
+        margin: 1.35em -0.25em 0 1.5em;
+        background: $white;
+        transform: rotate(22deg);
+        box-shadow: -4em 0.25em 0 0.025em $light-cloud, -1.3em -0.5em 0 0.025em $main-blue, -2.5em 0.4em 0 0.025em $main-blue;
+        animation: rain 3s infinite linear;
+    }
+    
+    .lightning {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        width: 3.6875em;
+        height: 3.6875em;
+        margin: -1.84375em;
+        background: $dark-cloud;
+        border-radius: 50%;
+        box-shadow: -2.1875em 0.6875em 0 -0.6875em $dark-cloud, 2.0625em 0.9375em 0 -0.9375em $dark-cloud, 0 0 0 0.375em $dark-cloud, -2.1875em 0.6875em 0 -0.3125em $dark-cloud, 2.0625em 0.9375em 0 -0.5625em $dark-cloud;
+    }
+    
+    .lightning:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 4.5625em;
+        height: 1em;
+        left: -0.5em;
+        background: $dark-cloud;
+        box-shadow: 0 0.4375em 0 -0.0625em $dark-cloud;
+    }
+    
+    .bolt {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        color: $lightning-blue;
+        margin: 0.85em 0 0 -0.25em;
+        opacity: $lightning-blue;
+        animation: lightning 2.2s infinite linear;
+    }
+    
+    .bolt:nth-child(2) {
+        width: 0.5em;
+        height: 0.25em;
+        margin: -3.75em 0 0 0;
+        transform: translate(2.5em, 2.25em);
+        opacity: 0.2;
+        animation: lightning 1.6s linear infinite;
+    }
+    
+    .bolt:before,
+    .bolt:after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        margin: -2em 0 0 -1.0125em;
+        border-top: 1.25em solid transparent;
+        border-right: 0.85em solid;
+        border-bottom: 0.85em solid;
+        border-left: 0.5em solid transparent;
+        transform: skewX(-10deg);
+    }
+    
+    .bolt:after {
+        margin: -0.25em 0 0 -0.25em;
+        border-top: 0.85em solid;
+        border-right: 0.5em solid transparent;
+        border-bottom: 1.25em solid transparent;
+        border-left: 0.85em solid;
+        transform: skewX(-10deg);
+    }
+    
+    .bolt:nth-child(2):before {
+        margin: -0.75em 0 0 -0.5em;
+        border-top: 0.625em solid transparent;
+        border-right: 0.375em solid;
+        border-bottom: 0.375em solid;
+        border-left: 0.25em solid transparent;
+    }
+    
+    .bolt:nth-child(2):after {
+        margin: -0.125em 0 0 -0.125em;
+        border-top: 0.375em solid;
+        border-right: 0.25em solid transparent;
+        border-bottom: 0.625em solid transparent;
+        border-left: 0.375em solid;
+    }
+    
+    .flake:before,
+    .flake:after {
+        content: '\2744';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -0.25em 0 0 -2.5em;
+        color: $white;
+        line-height: 2em;
+        opacity: 0.8;
+        animation: spin 8s linear infinite reverse;
+    }
+    
+    .flake:after {
+        margin: -0.4em 0 0 -0.55em;
+        font-size: 3em;
+        opacity: 0.8;
+        color: $white;
+        animation: spin 14s linear infinite;
+    }
+    
+    .flake:nth-child(2):before {
+        margin: -0.8em 0 0 0.4em;
+        font-size: 2.2em;
+        color: $white;
+        opacity: 0.2;
+        animation: spin 10s linear infinite;
+    }
+    
+    .flake:nth-child(2):after {
+        margin: 1em 0 0 0.25em;
+        font-size: 1.55em;
+        color: $white;
+        opacity: 0.7;
+        animation: spin 12s linear infinite reverse;
+    }
+    
+    //animations
+    @keyframes cloud {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.4;
+        }
+        100% {
+            opacity: 0;
+            transform: scale(0.5) translate(-200%, -3em);
+        }
+    }
+    
+    @keyframes spin {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes rain {
+        0% {
+            background: $main-blue;
+            box-shadow: -4em 0.25em 0 0.02em $main-blue, -1.3em -0.5em 0 0.025em $main-blue, -2.5em 0.4em 0 0.025em $light-cloud;
+        }
+        25% {
+            background: $light-cloud;
+            box-shadow: -4em 0.25em 0 0.02em $white, -1.3em -0.5em 0 0.025em $light-cloud, -2.5em 0.4em 0 0.025em $main-blue;
+        }
+        50% {
+            box-shadow: -4em 0.25em 0 0.02em $light-cloud, -1.3em -0.5em 0 0.025em $main-blue, -2.5em 0.4em 0 0.025em $white;
+        }
+        100% {
+            box-shadow: -4em 0.25em 0 0.02em $light-cloud, -1.3em -0.5em 0 0.025em $white, -2.5em 0.4em 0 0.025em $main-blue;
+        }
+    }
+    
+    @keyframes lightning {
+        45% {
+            color: $main-blue;
+            background: $main-blue;
+            opacity: 1;
+        }
+        50% {
+            color: $lightning-blue;
+            background: $lightning-blue;
+            opacity: 0.8;
+        }
+        55% {
+            color: $main-blue;
+            background: $main-blue;
+            opacity: 1;
+        }
+    }
