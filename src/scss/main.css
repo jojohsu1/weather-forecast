@@ -1204,7 +1204,7 @@ body {
         flex-direction: column;
         position: absolute;
         margin-top: 0;
-        top: 38rem;
+        top: 40rem;
         right: 0;
     }
     .units__celcius,
@@ -1247,6 +1247,9 @@ body {
     .current__precipitation {
         padding: 0 2rem;
     }
+    .units {
+        top: 30rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1279,9 +1282,6 @@ body {
         padding: 0 1rem;
         word-wrap: break-word;
         word-break: break-all;
-    }
-    .units {
-        top: 39rem;
     }
 }
 
